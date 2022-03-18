@@ -1,8 +1,9 @@
-protocol: http
-#protocol: ENV(PROTO)
-host: localhost
-#host: ENV(HOST)
-port: 3000
+#protocol: http
+protocol: ENV(PROTO)
+#host: localhost
+host: ENV(HOST)
+port: ENV(PORT)
+#port: 3000
 routes:
   - request:
       path: /hello/world

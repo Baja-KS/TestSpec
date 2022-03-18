@@ -1,0 +1,37 @@
+protocol: http
+#protocol: ENV(PROTO)
+host: localhost
+#host: ENV(HOST)
+port: 3000
+routes:
+  - request:
+      path: /hello/world
+      method: get
+        #params: 
+      headers:
+        content-type: application/json
+    response:
+      status: 200
+      data: Hello World!
+  - request:
+      path: /lowercase
+      method: post
+      headers:
+        content-type: application/json
+      data:
+        stra: ASDF
+    response:
+      status: 200
+        #data:
+        # statusCode: 500
+        # message: Internal server error
+      data:
+       lowercaseString: asdf
+      headers:
+       content-type: application/json; charset=utf-8
+        #random-header: asdf
+         
+
+
+
+
